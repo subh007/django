@@ -5,3 +5,6 @@ from django.http import HttpResponse
 def volunteerview(request):
     #return HttpResponse('volunteer')
     return render_to_response('volun/base.html',{'author' : 'subh'})
+
+def volunteer_name(request, name):
+    return render_to_response('volun/base.html',{'author' : name})

@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from volunteer.views import volunteerview
+from volunteer.views import volunteerview, volunteer_name
 
 from django.contrib import admin
 admin.autodiscover()
@@ -10,5 +10,6 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^volunteer/$', volunteerview)
+    url(r'^volunteer/$', volunteerview),
+    url(r'^volunteername/(?P<name>\w+)/$', volunteer_name),
 )
